@@ -1,0 +1,4 @@
+module CustomControl
+
+singleton CustomProperty 1.0 ./controls/CustomProperty.qml
+CustomButton 1.0 ./controls/CustomButton.qml
