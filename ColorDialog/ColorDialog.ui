@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ColorDialog</class>
+ <widget class="QWidget" name="ColorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>713</width>
+    <height>407</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ColorDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*主界面样式表*/
+QWidget
+{
+	border:none;
+	color:white;
+	font-family:微软雅黑;
+	font-size:14px;
+	outline:0px;
+	background:transparent;
+}
+
+#topWgt
+{
+	border-image:url(F:/data/images/mainui/bg.png) 4 4 4 4 stretch stretch;
+	border-width:4 4 4 4;
+}
+
+/*
+主体背景
+*/
+#mainWgt
+{
+	border-image:url(F:/data/images/mainui/main.png) 4 4 4 4 stretch stretch;
+	border-width:4 4 4 4;
+}
+QLineEdit
+{
+	background:#25272b;
+	border:1px solid #276d94;
+	padding-left:5px;
+}
+
+QGroupBox
+{
+	border:2px solid #276d94;
+	margin-top:10px;
+}
+QGroupBox::title
+{
+	left:10px;
+	bottom:10px;
+}
+
+/*1-按钮开始*/
+QPushButton
+{
+	background:#b82525;
+	border-radius:3px;
+	padding-top:-2px;
+}
+QPushButton:hover
+{
+	background:#d4352d;
+}
+QPushButton:pressed
+{
+	background:#ab2922;
+}
+/*1-按钮结束*/
+
+QSpinBox
+{
+	border:1px solid #276d94;
+	background-color:#25272b;
+	min-height: 26px;
+	min-width: 70px;
+}
+QSpinBox::up-arrow
+{
+	border-left:8px solid #25272b;
+	border-right:8px solid #25272b;
+	border-bottom:8px solid #276d94;
+	width:0px;
+	height: 0px;
+}
+QSpinBox::up-arrow:pressed
+{
+	border-bottom:9px solid #81c3d7;
+}
+QSpinBox::up-button
+{
+	margin-right:4px;
+	min-width: 16px;
+	min-height: 13px;
+	background-color:#25272b;
+}
+QSpinBox::down-arrow
+{
+	border-left:8px solid #25272b;
+	border-right:8px solid #25272b;
+	border-top:8px solid #276d94;
+	width:0px;
+	height: 0px;
+}
+QSpinBox::down-arrow:pressed
+{
+	border-top:9px solid #81c3d7;
+}
+QSpinBox::down-button
+{
+	margin-right:4px;
+	min-width:16px;
+	min-height:13px;
+	background-color:#25272b;
+}
+
+#m_pCloseBtn
+{
+	background:transparent;
+	border-image:url(F:/data/images/mainui/close.png);
+}
+
+#m_pCloseBtn:hover
+{
+	border-image:url(F:/data/images/mainui/close-H.png);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="topWgt" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>35</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="mainWgt" native="true">
+     <widget class="QGroupBox" name="basicGroup">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>5</y>
+        <width>228</width>
+        <height>216</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>基本颜色</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="BasicColorArea" name="basicColorWgt" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>214</width>
+           <height>191</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>214</width>
+           <height>191</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="customGroup">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>232</y>
+        <width>228</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>自定义颜色</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="CustomColorArea" name="customColorWgt" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>214</width>
+           <height>52</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>214</width>
+           <height>52</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>327</y>
+        <width>220</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>26</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>26</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>#</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="colorEdit">
+           <property name="minimumSize">
+            <size>
+             <width>72</width>
+             <height>26</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>72</width>
+             <height>26</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addCustomColorBtn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>添加到自定义颜色</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget1">
+      <property name="geometry">
+       <rect>
+        <x>253</x>
+        <y>7</y>
+        <width>301</width>
+        <height>272</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>9</number>
+       </property>
+       <item>
+        <widget class="SVColorArea" name="svColorWgt" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>256</width>
+           <height>256</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>256</width>
+           <height>256</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="HColorArea" name="hColorWgt" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>34</width>
+           <height>270</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>34</width>
+           <height>270</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget2">
+      <property name="geometry">
+       <rect>
+        <x>266</x>
+        <y>283</y>
+        <width>240</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="curColorLbl">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>当前颜色</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PreviewColorArea" name="previewWgt" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>166</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>166</width>
+           <height>68</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="newColorLbl">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>新的颜色</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget3">
+      <property name="geometry">
+       <rect>
+        <x>557</x>
+        <y>25</y>
+        <width>146</width>
+        <height>110</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="verticalSpacing">
+        <number>12</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="hLabel">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>色调(H):</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="hSpinBox">
+         <property name="minimumSize">
+          <size>
+           <width>72</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="accelerated">
+          <bool>true</bool>
+         </property>
+         <property name="suffix">
+          <string>度</string>
+         </property>
+         <property name="maximum">
+          <number>360</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="sLabel">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>饱和度(S):</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="sSpinBox">
+         <property name="minimumSize">
+          <size>
+           <width>72</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="accelerated">
+          <bool>true</bool>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="vLabel">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>亮度(V):</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="vSpinBox">
+         <property name="minimumSize">
+          <size>
+           <width>72</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="accelerated">
+          <bool>true</bool>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget4">
+      <property name="geometry">
+       <rect>
+        <x>558</x>
+        <y>153</y>
+        <width>146</width>
+        <height>110</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="verticalSpacing">
+        <number>12</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="rLabel">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>红(R):</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="rSpinBox">
+         <property name="minimumSize">
+          <size>
+           <width>72</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="accelerated">
+          <bool>true</bool>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="gLabel">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>绿(G):</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="gSpinBox">
+         <property name="minimumSize">
+          <size>
+           <width>72</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="accelerated">
+          <bool>true</bool>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="bLabel">
+         <property name="minimumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>66</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>蓝(B):</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="bSpinBox">
+         <property name="minimumSize">
+          <size>
+           <width>72</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="accelerated">
+          <bool>true</bool>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget5">
+      <property name="geometry">
+       <rect>
+        <x>558</x>
+        <y>310</y>
+        <width>138</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="okBtn">
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>62</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>确定</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelBtn">
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>62</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>取消</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>BasicColorArea</class>
+   <extends>QWidget</extends>
+   <header>basiccolorarea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CustomColorArea</class>
+   <extends>QWidget</extends>
+   <header>customcolorarea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SVColorArea</class>
+   <extends>QWidget</extends>
+   <header>svcolorarea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>HColorArea</class>
+   <extends>QWidget</extends>
+   <header>hcolorarea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PreviewColorArea</class>
+   <extends>QWidget</extends>
+   <header>previewcolorarea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
