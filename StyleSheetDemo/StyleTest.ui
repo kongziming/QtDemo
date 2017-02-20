@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StyleTest</class>
+ <widget class="QWidget" name="StyleTest">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>980</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StyleTest</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 01.初始化 begin */
+QWidget
+{
+	color:white;
+	font-family:微软雅黑;
+	font-size:14px;
+	outline:0px;
+	border:0px;
+}
+/* 01.初始化 end */
+
+#StyleTest
+{
+	background: #31363b;
+}
+
+/* 02-按钮 begin */
+QPushButton
+{
+	background:#b82525;
+	border-radius:3px;
+	padding-top:-2px;
+}
+QPushButton:hover
+{
+	background:#d4352d;
+}
+QPushButton:pressed
+{
+	background:#ab2922;
+}
+/* 02-按钮 end */
+
+/* 03-QLineEdit begin */
+QLineEdit, QTextEdit
+{
+	background:#25272b;
+	border:1px solid #065279;
+	padding-left:5px;
+}
+QLineEdit:disabled
+{
+	color:grey;
+}
+/* 03-QLineEdit end */
+
+/* 04-QToolTip begin */
+QToolTip
+{
+	color:yellow;
+	font-size:12px;
+	border:1px solid rgb(104, 162, 207);
+	background:rgb(30, 37, 47);
+	padding-left:-3px;
+}
+/* 04-QToolTip end */
+
+/* 05-QTabWidget begin */
+QTabWidget::pane
+{
+	border-top:1px solid #b82525;
+}
+QTabWidget::tab-bar
+{
+	/*height:27px;*/
+}
+QTabBar::tab
+{
+	width:82px;
+	height:30px;
+	background-color:#25272b;
+	margin-right:4px;
+}
+QTabBar::tab:hover
+{
+	background-color:#2c2e32;
+}
+QTabBar::tab:selected
+{
+	background-color:#b82525;
+}
+QTabBar::tab:first
+{
+	margin-left:30px;
+}
+/* 05-QTabWidget end */
+
+/* 06-QCheckBox begin */
+QCheckBox::indicator
+{
+	width:15px;
+	height: 15px;
+}
+QCheckBox::indicator:unchecked
+{
+	image:url(:/images/checkbox/uncheck.png);
+}
+QCheckBox::indicator:checked
+{
+	image:url(:/images/checkbox/check.png);
+}
+QCheckBox::indicator:indeterminate
+{
+	image:url();
+}
+/* 06-QCheckBox end */
+
+QSpinBox
+{
+	border:1px solid #276d94;
+	background-color:#25272b;
+	min-height: 26px;
+	min-width: 70px;
+}
+QSpinBox::up-arrow
+{
+	border-left:8px solid #25272b;
+	border-right:8px solid #25272b;
+	border-bottom:8px solid #276d94;
+	width:0px;
+	height: 0px;
+}
+QSpinBox::up-arrow:pressed
+{
+	border-bottom:9px solid #81c3d7;
+}
+QSpinBox::up-button
+{
+	margin-right:4px;
+	min-width: 16px;
+	min-height: 13px;
+	background-color:#25272b;
+}
+QSpinBox::down-arrow
+{
+	border-left:8px solid #25272b;
+	border-right:8px solid #25272b;
+	border-top:8px solid #276d94;
+	width:0px;
+	height: 0px;
+}
+QSpinBox::down-arrow:pressed
+{
+	border-top:9px solid #81c3d7;
+}
+QSpinBox::down-button
+{
+	margin-right:4px;
+	min-width:16px;
+	min-height:13px;
+	background-color:#25272b;
+}
+
+QGroupBox
+{
+	border:1px solid #065279;
+	margin-top:10px;
+}
+QGroupBox::title
+{
+	left:10px;
+	bottom:10px;
+}
+
+/* 滚轮开始 */
+QScrollBar
+{
+    background:transparent;
+    border:none;
+    border:1px solid #6b7b8c;
+}
+QScrollBar::handle
+{
+    background:#7690a9;
+    border:none;
+}
+QScrollBar:horizontal
+{
+    height:10px;
+    padding:0 8px;
+}
+QScrollBar::handle:horizontal
+{
+    width:6px;
+    margin:1px 0;
+}
+QScrollBar:vertical
+{
+    width:10px;
+    padding:8px 0;
+}
+QScrollBar::handle:vertical
+{
+    height:6px;
+    margin:0 1px;
+}
+QScrollBar::add-line:horizontal
+{
+    subcontrol-position:right;
+    subcontrol-origin:padding;
+    width:8px;
+    border:none;
+}
+QScrollBar::sub-line:horizontal
+{
+    subcontrol-position:left;
+    subcontrol-origin:padding;
+    width:8px;
+    border:none;
+}
+QScrollBar::add-line:vertical
+{
+    subcontrol-position:bottom;
+    subcontrol-origin:padding;
+    height:8px;
+    border:none;
+}
+QScrollBar::sub-line:vertical
+{
+    subcontrol-position:top;
+    subcontrol-origin:padding;
+    height:8px;
+    border:none;
+}
+QScrollBar::left-arrow, QScrollBar::right-arrow, QScrollBar::up-arrow, QScrollBar::down-arrow
+{
+    width:6px;
+    height:6px;
+    background:#55616f;
+    border:none;
+}
+QScrollBar::add-page, QScrollBar::sub-page
+{
+    background:none;
+}
+/* 滚轮结束 */
+
+QHeaderView
+{
+	border:none;
+	color:white
+}
+
+QHeaderView::section
+{
+    background-color: #16181c;
+	border:1px solid #23262c;
+	border-left:none;
+	padding:4px;
+}
+
+QHeaderView::section:first
+{
+	border-left:1px solid #23262c;
+}
+
+QTableView
+{
+	alternate-background-color:#1a1c20;
+	background:#16181c;
+	border:none;
+	selection-background-color: #2d2f32;outline:0px;
+}
+
+QTableView::item:focus
+{
+	border:0px;
+	background:#2d2f32;
+}
+
+QSlider
+{
+	
+}
+QSlider::sub-page:horizontal
+{
+	background-color:#b82525;
+	height:4px;
+	margin-left:10px;
+	border-radius:2px;
+}
+QSlider::groove:horizontal
+{
+    height: 4px;
+    background: #464647;
+	margin-left:10px;
+	margin-right:10px;
+	border-radius:2px;
+}
+QSlider::handle:horizontal
+{
+	border-image:url(:/images/slider/ply_btn.png);
+	width:19px;
+	margin:-8px -10 -9px -10px;
+
+}
+QSlider::handle:horizontal:hover
+{
+	border-image:url(:/images/slider/ply_btn_hvr.png);
+}
+
+
+QRadioButton
+{
+   spacing: 4px;
+   /* margin-bottom: 2px;*/
+}
+
+QRadioButton:disabled
+{
+    color: #76797C;
+}
+QRadioButton::indicator
+{
+    width: 21px;
+    height: 21px;
+}
+
+QRadioButton::indicator:unchecked
+{
+    image: url(:/images/radiobutton/unchecked.png);
+}
+
+
+QRadioButton::indicator:unchecked:hover,
+QRadioButton::indicator:unchecked:pressed
+{
+    image: url(:/images/radiobutton/unchecked_focus.png);
+}
+
+QRadioButton::indicator:checked
+{
+    image: url(:/images/radiobutton/checked.png);
+}
+
+QRadioButton::indicator:checked:hover,
+QRadioButton::indicator:checked:pressed
+{
+    image: url(:/images/radiobutton/checked_focus.png);
+}
+
+QRadioButton::indicator:checked:disabled
+{
+    image: url(:/images/radiobutton/checked_disabled.png);
+}
+
+QRadioButton::indicator:unchecked:disabled
+{
+    image: url(:/images/radiobutton/unchecked_disabled.png);
+}
+
+QToolBox  {
+    padding: 0px;
+    /*border: 1px solid #316a91;*/
+}
+
+QToolBox::tab {
+    background-color: #467ca2;
+    border: 1px solid #316a91;
+    border-bottom: 1px transparent #31363b;
+}
+
+QToolBox::tab:selected {
+    background-color: #6196bb;
+ }
+QToolBox QWidget
+{
+	background-color: #d6e6f1;
+}
+QToolBar::handle {
+      image: url(:/images/slider/ply_btn.png);
+  }
+
+QTreeView
+{
+	alternate-background-color:rgba(0,0,0,30);
+	background:transparent;
+	gridline-color:#39546e;
+	border:1px solid #5d7184;
+	selection-background-color:rgba(3, 17, 33, 100);
+}
+QTreeVire::item
+{
+	height:24px;
+	border:none;
+}
+QTreeView::item:hover
+{
+	background:rgba(3, 17, 33, 50);
+}
+QTreeView::item:selected
+{
+	background:rgba(3, 17, 33, 100);
+}
+QTreeView::branch:has-siblings:adjoins-item
+{
+	border-image:url();
+}
+QTreeView::branch:!has-children:!has-siblings:adjoins-item
+{
+	border-image:url();
+}
+QTreeView::branch:has-siblings:!adjoins-item
+{
+	border-image:url();
+}
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings
+{
+	image:url(:/images/tree/collapse.png);
+}
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings
+{
+	image:url(:/images/tree/expand.png);
+}
+
+QListView
+{
+	alternate-background-color:#1a1c20;
+	background:#16181c;
+	border:none;
+	selection-background-color: #2d2f32;outline:0px;
+}
+QListView::item
+{
+	height:26px;
+}
+QListView::item:hover
+{
+	background:rgba(3, 17, 33, 50)
+}
+QListView::item:selected
+{
+	background:#2d2f32
+}
+/*QListView::item:!focus
+{
+	color:white;
+}*/
+QListView::item:selected:!active
+{
+	color:white
+}
+
+QProgressBar
+{
+	border: none;
+	border-radius: 4px;
+	background-color:#f5f5f5;
+}
+
+QProgressBar::chunk
+{
+	border-top-left-radius:4px;
+	border-bottom-left-radius:4px;
+	background-image:url(:/images/progressbar/prog3.png);
+}</string>
+  </property>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>20</y>
+     <width>281</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>600</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>600</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>260</y>
+     <width>131</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::ContiguousSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <property name="showGrid">
+    <bool>false</bool>
+   </property>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>音乐标题</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>歌手</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>专辑</string>
+    </property>
+   </column>
+   <item row="0" column="0">
+    <property name="text">
+     <string>塘桥夜话</string>
+    </property>
+   </item>
+   <item row="0" column="1">
+    <property name="text">
+     <string>不才</string>
+    </property>
+   </item>
+   <item row="0" column="2">
+    <property name="text">
+     <string>热门华语264</string>
+    </property>
+   </item>
+   <item row="1" column="0">
+    <property name="text">
+     <string>南方姑娘</string>
+    </property>
+   </item>
+   <item row="1" column="1">
+    <property name="text">
+     <string>赵雷</string>
+    </property>
+   </item>
+   <item row="1" column="2">
+    <property name="text">
+     <string>赵小雷</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QToolBox" name="toolBox">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>140</y>
+     <width>201</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <property name="tabSpacing">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>201</width>
+      <height>129</height>
+     </rect>
+    </property>
+    <attribute name="label">
+     <string>苏菲的世界</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>201</width>
+      <height>129</height>
+     </rect>
+    </property>
+    <attribute name="label">
+     <string>大秦帝国</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>201</width>
+      <height>129</height>
+     </rect>
+    </property>
+    <attribute name="label">
+     <string>黑客与画家</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="page_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>201</width>
+      <height>129</height>
+     </rect>
+    </property>
+    <attribute name="label">
+     <string>恋恋风尘</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="confirmButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>72</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>72</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>72</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
+     <width>130</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>26</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>371</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>歌曲列表</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>收藏者</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>评论(0)</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>66</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>66</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>66</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>苹果</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>40</y>
+     <width>53</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>不才</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>88</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>72</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>92</width>
+     <height>28</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>测试</string>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="treeWidget">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>140</y>
+     <width>291</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="animated">
+    <bool>true</bool>
+   </property>
+   <property name="headerHidden">
+    <bool>true</bool>
+   </property>
+   <column>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </column>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>新建子项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新建项目</string>
+     </property>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>260</y>
+     <width>291</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>260</y>
+     <width>201</width>
+     <height>181</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>520</y>
+     <width>221</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>65</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="invertedAppearance">
+    <bool>false</bool>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

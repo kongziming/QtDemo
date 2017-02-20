@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/button/button-h.png</file>
+        <file>images/button/button-n.png</file>
+        <file>images/button/button-s.png</file>
+        <file>images/checkbox/check.png</file>
+        <file>images/checkbox/uncheck.png</file>
+        <file>images/slider/ply_btn_hvr.png</file>
+        <file>images/slider/ply_btn.png</file>
+        <file>images/radiobutton/checked.png</file>
+        <file>images/radiobutton/checked_disabled.png</file>
+        <file>images/radiobutton/checked_focus.png</file>
+        <file>images/radiobutton/unchecked.png</file>
+        <file>images/radiobutton/unchecked_disabled.png</file>
+        <file>images/radiobutton/unchecked_focus.png</file>
+        <file>images/tree/collapse.png</file>
+        <file>images/tree/expand.png</file>
+        <file>images/progressbar/prog.png</file>
+        <file>images/progressbar/prog1.png</file>
+        <file>images/progressbar/prog2.png</file>
+        <file>images/progressbar/prog3.png</file>
+    </qresource>
+</RCC>
