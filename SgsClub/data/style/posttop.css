@@ -1,0 +1,22 @@
+QWidget
+{
+    color:#333333;
+    font-family:微软雅黑;
+    font-size:16px;
+}
+#hometopWgt
+{
+    background-color:#f5f5f5;
+}
+#returnHome
+{
+    border-image:url(../data/images/posttop/home.png);
+}
+#titleBtn
+{
+    border:none;
+}
+#tempBtn
+{
+    border-image:url(../data/images/posttop/temp.png);
+}

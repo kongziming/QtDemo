@@ -1,0 +1,26 @@
+QWidget
+{
+	color:#333333;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:14px;
+}
+
+#bottomWgt
+{
+	background-color:#f7f7f7;
+}
+
+#postBtn
+{
+	background-color: #ff8200;
+	background-image: url(../data/images/bottom/post_n.png);
+	border-radius:4px;
+}
+
+QToolButton
+{
+	border:none;
+	margin:0;
+	background:transparent;
+	padding-bottom:6px;
+}

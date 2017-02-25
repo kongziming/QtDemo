@@ -1,0 +1,93 @@
+/* 01.³õÊ¼»¯ begin */
+QWidget
+{
+	color:#000000;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:14px;
+	outline:0px;
+	border:0px;
+}
+
+#scrollArea
+{
+	background:transparent;
+	background-color:#f2f2f2;
+}
+
+/* ¹öÂÖ¿ªÊ¼ */
+QScrollBar
+{
+    background:transparent;
+    border:none;
+}
+QScrollBar::handle
+{
+    background:#a6a6a6;
+    border:none;
+	border-radius:3px;
+}
+QScrollBar:horizontal
+{
+    height:10px;
+    padding:0 8px;
+}
+QScrollBar::handle:horizontal
+{
+    width:6px;
+    margin:1px 0;
+}
+QScrollBar:vertical
+{
+    width:8px;
+    padding:2px 0;
+}
+QScrollBar::handle:vertical
+{
+    height:4px;
+    margin:0 1px;
+}
+QScrollBar::add-line:horizontal
+{
+    subcontrol-position:right;
+    subcontrol-origin:padding;
+    width:8px;
+    border:none;
+}
+QScrollBar::sub-line:horizontal
+{
+    subcontrol-position:left;
+    subcontrol-origin:padding;
+    width:8px;
+    border:none;
+}
+QScrollBar::add-line:vertical
+{
+    subcontrol-position:bottom;
+    subcontrol-origin:padding;
+    height:0px;
+    border:none;
+}
+QScrollBar::sub-line:vertical
+{
+    subcontrol-position:top;
+    subcontrol-origin:padding;
+    height:0px;
+    border:none;
+}
+QScrollBar::left-arrow, QScrollBar::right-arrow, QScrollBar::up-arrow, QScrollBar::down-arrow
+{
+    width:6px;
+    height:6px;
+    background:#55616f;
+    border:none;
+}
+QScrollBar::add-page, QScrollBar::sub-page
+{
+    background:none;
+}
+/* ¹öÂÖ½áÊø */
+
+#homeContent
+{
+	background-color:#f2f2f2;
+}

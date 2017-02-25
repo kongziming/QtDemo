@@ -1,0 +1,61 @@
+body
+{
+    font-family: '微软雅黑';
+    font-size:14px;
+    padding: 0;
+    margin: 0;
+}
+#bg
+{
+    background-color: #f2f2f2;
+}
+.title
+{
+    color:#f46200;
+    padding:6px 6px 2px 9px;
+    cursor: pointer;
+}
+.author span
+{
+    color:#507daf;
+    cursor: pointer;
+}
+.author
+{
+    padding:2px 6px 2px 9px;
+    color:#939393;
+}
+.content
+{
+    padding:2px 6px 6px 9px;
+    color: #333333;
+    cursor: pointer;
+    overflow-x:hidden;
+}
+.post
+{
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+.post:hover
+{
+    background-color:#d5d4d4;
+}
+
+.top
+{
+    padding: 6px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;
+    background:transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    background-color: #a6a6a6;
+}

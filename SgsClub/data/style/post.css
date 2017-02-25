@@ -1,0 +1,32 @@
+#singlePost
+{
+	background:#ffffff;
+	border-radius:4px;
+}
+
+#singlePost:hover
+{
+	background: #d5d4d4;
+}
+
+#titleBtn
+{
+	text-align:left;
+	font-size:15px;
+	padding-left:10px;
+	color:#f46200
+}
+
+#nameBtn
+{
+	text-align:left;
+	font-size:14px;
+	padding-left:10px;
+	color:#939393
+}
+
+#summaryText
+{
+	background: transparent;
+	padding-left:6px;
+}

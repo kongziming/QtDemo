@@ -1,0 +1,73 @@
+body
+{
+    font-family: '宋体';
+    font-size:14px;
+    padding: 0;
+    margin: 0;
+}
+
+
+::-webkit-scrollbar
+{
+    width: 8px;
+    background:transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    background-color: #a6a6a6;
+}
+
+.avatar
+{
+    margin:14px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    overflow:hidden;
+}
+.avatar img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right{
+    margin-left:74px; background:#fff;
+    min-height:60px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.left {
+    width:68px; float:left; background:#fff;
+}
+
+.author
+{
+    padding-top: 14px;
+    color: #507daf;
+}
+
+.reply
+{
+    margin:0 auto; overflow:auto; _display:inline-block;
+}
+
+.message
+{
+    padding-top: 4px;
+    padding-bottom: 10px;
+    padding-right:4px;
+}
+
+.message img
+{
+    max-width:160px; max-height:160px;
+}
+
+.reply
+{
+    overflow-x:hidden;
+}

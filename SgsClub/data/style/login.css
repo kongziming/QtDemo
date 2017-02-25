@@ -1,0 +1,41 @@
+QWidget
+{
+    font-family:微软雅黑;
+    font-size:16px;
+}
+
+#bgWgt
+{
+    background-color: #ffffff;
+}
+
+#logoLbl
+{
+    border-image:url(../data/images/login/logo.png);
+}
+
+#userNameEdit, #pwdEdit
+{
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid #dddddd;
+    padding: 4px;
+}
+
+#loginBtn
+{
+    background-color: #ff8505;
+    color:#ffffff;
+    border:none;
+    border-radius:4px;
+}
+
+#loginBtn:hover
+{
+    background-color: #fd9221;
+}
+
+#loginBtn:pressed
+{
+    background-color: #eb7800;
+}

@@ -1,0 +1,22 @@
+QWidget
+{
+	color:#333333;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:16px;
+}
+#hometopWgt
+{
+	background-color:#f5f5f5;
+}
+#friendBtn
+{
+	border-image:url(../data/images/hometop/friend.png);
+}
+#titleBtn
+{
+	border:none;
+}
+#tempBtn
+{
+	border-image:url(../data/images/hometop/hh.png);
+}

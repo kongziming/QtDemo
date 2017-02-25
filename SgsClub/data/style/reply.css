@@ -1,0 +1,37 @@
+QWidget
+{
+    font-family:微软雅黑;
+    font-size:14px;
+    outline:0px;
+    border:0px;
+}
+
+QPushButton
+{
+    color:#ffffff;
+    background:#1f91cf;
+    border-radius:3px;
+    padding-top:-2px;
+}
+QPushButton:hover
+{
+    background:#1e99dd;
+}
+QPushButton:pressed
+{
+    background:#1a77aa;
+}
+/* 02-按钮 end */
+
+/* 03-QLineEdit begin */
+QLineEdit, QTextEdit
+{
+    background:#ffffff;
+    border:1px solid #dadada;
+    padding-left:5px;
+    border-radius: 4px;
+}
+QLineEdit:disabled
+{
+    color:grey;
+}
