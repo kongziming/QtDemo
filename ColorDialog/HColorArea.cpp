@@ -33,7 +33,6 @@ void HColorArea::paintEvent(QPaintEvent *)
 	painter.setRenderHint(QPainter::Antialiasing);
 	painter.drawPixmap(0, 0, m_huePixmap);
 
-	//画三角形的标记
 	int iHeight = m_iColorHeight - m_hue * m_iColorHeight;
 	QPolygonF triangle;
 	triangle.append(QPointF(m_iColorWidth, iHeight + topMargin));
