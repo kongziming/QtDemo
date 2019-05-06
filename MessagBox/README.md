@@ -1,11 +1,11 @@
 # Qt_MessageBox
 
-##程序说明
+## 程序说明
 消息对话框
 界面基本样式如下：<br/>
-![](https://github.com/ikongziming/Qt_MessageBox/blob/master/image/demo.png?raw=true)
+![](image/demo.png)
 
-##使用示例
+## 使用示例
 ```c++
 SimpleMsgBox::ButtonRole role = SimpleMsgBox::warning(this, "删除", "确定删除？");
 if (role = SimpleMsgBox::Yes)
