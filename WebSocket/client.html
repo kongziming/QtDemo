@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+	<script>
+		var ws = new WebSocket("ws://localhost:9999");
+		ws.onmessage = function (e) {
+			console.log(e.data);
+		};
+		ws.onopen = function () {
+			var msg = "Test Message.";
+			ws.send(msg);
+		}
+		ws.onmessage = function (evt) {
+			console.log("Received Message: " + evt.data);
+		};
+		ws.onclose = function (evt) {
+			console.log("Connection closed.");
+		};
+	</script>
+</head>
+
+<body>
+</body>
